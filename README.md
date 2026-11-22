@@ -25,4 +25,4 @@ PLANT UML (PARA DIAGRAMAS xd) https://plantuml.com/en-dark/guide
 
 TKINTER PARA LA GUI https://docs.python.org/3/library/tkinter.html
 
-PILLOW complemento de tkinter para imáge
+PILLOW complemento de tkinter para imágenes https://pillow.readthedocs.io/en/stable/
