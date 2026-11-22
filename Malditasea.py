@@ -9,7 +9,7 @@ Cartelera = tk.Label(
     root, 
     text="Cartelera"
 )
-Cartelera.pack()
+Cartelera.grid(row=0, column=0, columnspan=3)
 
 #Como les valio madre las peliculas
 
@@ -24,13 +24,29 @@ p3 = ImageTk.PhotoImage(p3)
 p4 = ImageTk.PhotoImage(p4)
 p5 = ImageTk.PhotoImage(p5)
 
+Label
+
 def detalles():
-print("Aparecen los asientos ocupados, o algo asi, no s[e]")
+    print("Aparecen los asientos ocupados, o algo asi, no s[e]")
 
 peli1 = tk.Button (
     root,
-    image=p3
+    image=p3,
+    command=detalles
 )
-peli1.pack()
+peli2 = tk.Button (
+    root,
+    image=p4,
+    command=detalles
+)
+peli3 = tk.Button (
+    root,
+    image=p5,
+    command=detalles
+)
+
+peli1.grid(row=1, column=0)
+peli2.grid(row=1, column=1)
+peli3.grid(row=1, column=2)
 
 root.mainloop()
