@@ -1,6 +1,7 @@
 #Mas clases, que emocion wuuu (estoy harto)
 
 import tkinter as tk
+from Asientos import Asientos
 
 class Horario:
     def __init__(self, hora, precio):
@@ -39,16 +40,10 @@ class Funciones:
             self.ventana,
             text=f"{horario.hora} - ${horario.precio}",
             font="Arial, 12",
-            command=lambda h=Horario: self.seleccionar(h)
+            command=lambda h=horario: self.seleccionar(h)
             )
 
             boton.pack(pady=8)
 
     def seleccionar(self, horario):
-        self.horarioselc = horario
-        resultado = tk.Label(
-            self.ventana,
-            text=f"Seleccionaste: {horario.hora}\n Precio: ${horario.precio}"
-        )
-
-        resultado.pack(pady=10)
+        Asientos(self.pelicula, horario)
