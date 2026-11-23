@@ -15,11 +15,7 @@ class Funciones:
         self.ventana.title = ("Seleccionar horario")
         self.ventana.geometry("500x400")
 
-        self.horarios = [
-            Horario("14:00", 80),
-            Horario("17:00", 80),
-            Horario("20:00", 100)
-                ]
+        self.horarios = pelicula.horarios
 
         self.mostrar()
 
