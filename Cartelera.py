@@ -2,6 +2,7 @@
 
 from PIL import Image, ImageTk
 import tkinter as tk
+from Horarios import Funciones
 
 class Cartelera:
     def __init__(self, root, peliculas):
@@ -16,7 +17,7 @@ class Cartelera:
         text="Cartelera",
         font="Arial, 24"
 )
-        cartelera.grid(row=0, column=0, columnspan=3)
+        cartelera.grid(row=0, column=0, columnspan=3, pady=50)
 
 
         self.boton()
@@ -33,17 +34,20 @@ class Cartelera:
 
             boton = tk.Button(
                     self.frame,
-                    image=imagen
+                    image=imagen,
+                    borderwidth=0,
+                    command=lambda p=pelicula: Funciones(p)
+                  
             )
 
             name = tk.Label (
                 self.frame,
                 text = pelicula.nombre,
-                font= "Arial, 24"
+                font= "Arial, 12"
             )
 
-            boton.grid(row=1, column=i, padx=20, pady=20)
-            name.grid(row=2, column=i, padx=20, pady=20)
+            boton.grid(row=1, column=i, padx=20, pady=0)
+            name.grid(row=2, column=i, padx=20, pady=0)
 
 
 
